@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Password_manager_lab.Views.NewUserView"
+             Title="NewUserView">
+
+    <StackLayout Padding="20">
+        <Label Text="Welcome to Password Manager!"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+
+        <Border Stroke="Gray" StrokeThickness="2" BackgroundColor="White" Padding="10">
+            <StackLayout Orientation="Vertical" Spacing="10">
+
+                <Label x:Name="ErrorMessageLabel" 
+                       Text="Placeholder error message."
+                       TextColor="Red" 
+                       IsVisible="False" 
+                       HorizontalOptions="Center" />
+
+
+                <Entry x:Name="FirstnameEntry"
+                       Placeholder="First name" />
+                <Entry x:Name="LastNameEntry"
+                       Placeholder="Last Name" />
+
+                <Entry x:Name="UsernameEntry"
+                       Placeholder="Username" />
+
+                <Entry x:Name="PasswordEntry"
+                       Placeholder="Password"
+                       IsPassword="True" />
+
+                <Entry x:Name="ConfirmPasswordEntry"
+                       Placeholder="Confirm Password"
+                       IsPassword="True" />
+
+                <Button Text="Submit"
+                        Clicked="OnSubmitButtonClicked"
+                        BackgroundColor="LightBlue"
+                        HorizontalOptions="Center" />
+            </StackLayout>
+        </Border>
+    </StackLayout>
+</ContentPage>
